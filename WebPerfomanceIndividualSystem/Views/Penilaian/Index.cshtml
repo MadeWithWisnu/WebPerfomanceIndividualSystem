@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basilisk</title>
+	<link rel="icon" type="image/ico" href="../../favicon.ico"/>
+    <link rel="stylesheet" href="../../css/normalize.css" />
+    <link rel="stylesheet" href="../../css/font-awesome.css" />
+    <link rel="stylesheet" href="../../css/site.css" />
+	<link rel="stylesheet" href="../../css/authorization.css" />
+	<link rel="stylesheet" href="../../css/responsive.css" />
+    <script src="../../js/jquery-3.6.0.js"></script>
+	<script src="../../js/apexcharts.js"></script>
+	<script src="../../js/site.js" defer></script>
+</head>
+<body class="main-body">
+	<nav>
+		<div class="company-logo">
+			<h1>
+				Individual Performance <span class="bold">System</span>
+			</h1>
+		</div>
+		<a class="menu dashboard" asp-controller="Dashboard" asp-action="Index">
+			<i class="fas fa-chart-pie"></i>
+			<span>Dashboard</span>
+		</a>
+		<a class="menu category" asp-controller="Penilaian" asp-action="Index">
+			<i class="fas fa-th"></i>
+			<span>Penilaian Karyawan</span>
+		</a>
+	</nav>
+	<header>
+		<div class="bread-crumbs">
+			<a class="toggle-menu" href="javascript:;"><i class="fas fa-bars"></i></a>
+			<span>Penilaian Karyawan</span>
+		</div>
+		<div class="user-wrapper">
+			<div class="user">
+				<a href="../account/change-password-form.html" class="full-name">made</a>
+				<span class="role">admin</span>
+			</div>
+			<div class="sign-out">
+				<form action="" method="POST">
+					<input type="hidden" />
+					<button type="submit"><i class="fas fa-sign-out-alt"></i></button>
+				</form>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="grid-container category-index">
+			<form method="get" class="filter">
+				<input type="text" name="name" placeholder="Nama Karyawan...">
+				<button class="blue-button" type="submit">Search</button>
+			</form>
+			<a class="blue-button create-button">Input Nama Karyawan</a>
+			<table>
+				<thead>
+					<th>Action</th>
+					<th>Name</th>
+					<th>NIK</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<a class="blue-button update-button">Edit</a>
+							<a class="blue-button delete-button">Delete</a>
+						</td>
+						<td>Agung</td>
+						<td>F1B001</td>
+					</tr>
+					<tr>
+						<td>
+							<a class="blue-button update-button">Edit</a>
+							<a class="blue-button delete-button">Delete</a>
+						</td>
+						<td>Kusnandar</td>
+						<td>F1B002</td>
+					</tr>
+					<tr>
+						<td>
+							<a class="blue-button update-button">Edit</a>
+							<a class="blue-button delete-button">Delete</a>
+						</td>
+						<td>Maryadi</td>
+						<td>F1B003</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="3">
+							<div class="pagination">
+								<div>page 1 of 1</div>
+								<div>
+									<a href="javascript:;" class="number">1</a>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+	</main>
+	<footer>
+	</footer>
+</body>
+</html>

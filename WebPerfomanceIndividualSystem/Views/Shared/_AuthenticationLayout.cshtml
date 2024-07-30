@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Basilisk</title>
+    <link rel="stylesheet" href="~/css/normalize.css" />
+    <link rel="stylesheet" href="~/css/font-awesome.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script src="~/js/jquery-3.6.0.js"></script>
+</head>
+<body class="authentication-body">
+    <div class="authentication-wrapper">
+        <header class="company-logo">
+            <img src="~/favicon.ico" alt="Basilisk" />
+            <h1>
+                Trade of <span class="bold">basilisk</span>
+            </h1>
+        </header>
+        <main>@RenderBody()</main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿@model AuthLoginVM
+
+@{
+    Layout = "_Layout";
+}
+
+<div class="main1">
+    <p class="sign" align="center">Sign in</p>
+    <form method="post" asp-action="Login">
+        <h1>@ViewBag.Message</h1>
+
+        <input class="un" type="text" asp-for="@Model.Username" required placeholder="Username" />
+        <span asp-validation-for="@Model.Username"></span>
+
+        <input class="pass" type="password" asp-for="@Model.Password" required placeholder="Password" />
+        <span asp-validation-for="@Model.Password"></span>
+
+        <select class="pass" id="role" asp-for="@Model.Role">
+            <option class="pass" value="Admin">Admin</option>
+            <option class="pass" value="Employee">Employee</option>
+            <option class="pass" value="Supervisor">Supervisor</option>
+        </select>
+        <input class="submit" type="submit">
+    </form>
+</div>
